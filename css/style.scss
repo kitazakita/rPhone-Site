@@ -18,8 +18,14 @@ a {
     color: black;
   }
 }
+.d-flex {
+  display: flex;
+}
 .d-none {
   display: none;
+}
+.h-100 {
+  height: 100%;
 }
 
 header {
@@ -62,6 +68,7 @@ nav {
           line-height: 50px;
           white-space: nowrap;
           transition: all 0.1s;
+          text-transform: uppercase;
           &:hover {
             background-color: $grey;
           }
@@ -129,11 +136,15 @@ nav {
       left: 50%;
       transform: translateX(-50%) translateY(-120%);
       width: 100%;
-      background-color: $black;
       display: flex;
       gap: 2rem;
       flex-direction: column;
       transition: all 0.7s ease-in-out;
+      background: rgba(51, 51, 51, 0.85);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(5.5px);
+      -webkit-backdrop-filter: blur(5.5px);
+
       li {
         width: 100%;
         text-align: center;
@@ -143,13 +154,78 @@ nav {
           text-decoration: none;
           color: $white;
           padding: 1rem 0;
+          text-transform: uppercase;
         }
       }
     }
-
     .menu_down {
       transform: translateX(-50%) translateY(0);
       transition: all 0.7s ease-in-out;
+    }
+  }
+}
+
+// MainVisual
+section#MainVisual {
+  min-height: 500px;
+  background: rgb(30, 0, 110);
+  background: linear-gradient(
+    90deg,
+    rgba(30, 0, 110, 1) 0%,
+    rgba(140, 0, 0, 1) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  @include md {
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .description {
+    & > * {
+      color: $white;
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+    height: 100%;
+    margin: auto;
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      @include md {
+        font-size: 2rem;
+      }
+    }
+    p {
+      font-size: 1.7rem;
+      @include md {
+        font-size: 1.2rem;
+      }
+    }
+    a.btn {
+      background-color: $blue;
+      border-radius: 1.2rem;
+      text-align: center;
+      padding: 0.3rem 1.2rem;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      @include md {
+        font-size: 1rem;
+      }
+    }
+  }
+  .devicePhoto {
+    width: 60%;
+    @include sm {
+      width: 80%;
     }
   }
 }

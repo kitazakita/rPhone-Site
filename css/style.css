@@ -18,8 +18,16 @@ a:visited {
   color: black;
 }
 
+.d-flex {
+  display: flex;
+}
+
 .d-none {
   display: none;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 header {
@@ -67,6 +75,7 @@ nav .pc_nav ul li a {
   line-height: 50px;
   white-space: nowrap;
   transition: all 0.1s;
+  text-transform: uppercase;
 }
 nav .pc_nav ul li a:hover {
   background-color: #666666;
@@ -129,11 +138,14 @@ nav .mobile_nav ul {
   left: 50%;
   transform: translateX(-50%) translateY(-120%);
   width: 100%;
-  background-color: #333333;
   display: flex;
   gap: 2rem;
   flex-direction: column;
   transition: all 0.7s ease-in-out;
+  background: rgba(51, 51, 51, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
 }
 nav .mobile_nav ul li {
   width: 100%;
@@ -145,8 +157,77 @@ nav .mobile_nav ul li a {
   text-decoration: none;
   color: #fcfcfc;
   padding: 1rem 0;
+  text-transform: uppercase;
 }
 nav .mobile_nav .menu_down {
   transform: translateX(-50%) translateY(0);
   transition: all 0.7s ease-in-out;
+}
+
+section#MainVisual {
+  min-height: 500px;
+  background: rgb(30, 0, 110);
+  background: linear-gradient(90deg, rgb(30, 0, 110) 0%, rgb(140, 0, 0) 100%);
+  display: flex;
+  align-items: flex-end;
+}
+@media screen and (max-width: 768px) {
+  section#MainVisual {
+    padding-top: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+section#MainVisual .description {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
+  align-items: center;
+}
+section#MainVisual .description > * {
+  color: #fcfcfc;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+section#MainVisual .description h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  section#MainVisual .description h1 {
+    font-size: 2rem;
+  }
+}
+section#MainVisual .description p {
+  font-size: 1.7rem;
+}
+@media screen and (max-width: 768px) {
+  section#MainVisual .description p {
+    font-size: 1.2rem;
+  }
+}
+section#MainVisual .description a.btn {
+  background-color: #0066ff;
+  border-radius: 1.2rem;
+  text-align: center;
+  padding: 0.3rem 1.2rem;
+  margin-top: 0.5rem;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  section#MainVisual .description a.btn {
+    font-size: 1rem;
+  }
+}
+section#MainVisual .devicePhoto {
+  width: 60%;
+}
+@media screen and (max-width: 576px) {
+  section#MainVisual .devicePhoto {
+    width: 80%;
+  }
 }/*# sourceMappingURL=style.css.map */
