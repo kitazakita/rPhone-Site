@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: #fdfdfd;
+}
+
+header .flex-container {
+  display: flex;
+  padding: 1% 5%;
+  background: #333;
+  color: #fdfdfd;
+  justify-content: space-between;
+}
+
+.btn {
+  background: #0066ff;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.mainVisual {
+  min-height: 100vh;
+  height: 500px;
+  background: rgb(20, 0, 138);
+  background: linear-gradient(90deg, rgb(20, 0, 138) 0%, rgb(255, 0, 146) 100%);
+  display: flex;
+  color: #fdfdfd;
+  font-size: 1.5rem;
+}
+.mainVisual .left_wrap {
+  width: 50%;
+  padding: 10% 15%;
+}
+.mainVisual .left_wrap ul {
+  list-style: none;
+}
+.mainVisual .left_wrap ul li {
+  margin-bottom: 10%;
+  position: relative;
+}
+.mainVisual .left_wrap ul li a {
+  display: block;
+  color: #fdfdfd;
+}
+.mainVisual .left_wrap ul li a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -18%;
+  transform: translateY(-50%);
+  width: 1.5rem;
+  height: 1px;
+  background-color: #fdfdfd;
+  transition: all 0.4s;
+}
+.mainVisual .left_wrap ul li a:hover {
+  color: red;
+}
+.mainVisual .left_wrap ul li a:hover::before {
+  background-color: red;
+  transform: translateX(50%);
+}
+.mainVisual .left_wrap p {
+  margin-top: 20%;
+}
+.mainVisual .right_wrap {
+  width: 50%;
+}/*# sourceMappingURL=style.css.map */
