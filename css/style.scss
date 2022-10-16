@@ -31,6 +31,9 @@ a {
   width: 80%;
   margin: 0 auto;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 
 /*----
 Contents Start
@@ -142,6 +145,7 @@ nav {
       left: 50%;
       transform: translateX(-50%) translateY(-120%);
       width: 100%;
+      height: 100vh;
       display: flex;
       gap: 2rem;
       flex-direction: column;
@@ -243,15 +247,8 @@ section#about {
 
 // Camera
 section#camera {
-  padding: 5rem 0;
-  .title {
-    margin-bottom: 7rem;
-
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
-  }
+  padding: 8rem 0;
+  @include title;
 
   .camera_lens {
     .sub_title {
@@ -329,6 +326,56 @@ section#camera {
           width: 70%;
         }
       }
+    }
+  }
+}
+
+section#sound {
+  padding: 8rem 0;
+  @include title;
+
+  .sound_bgimg {
+    background-image: url(../images/Audio01.jpg);
+    width: 100%;
+    height: 400px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .sound_description {
+    margin: 8rem auto;
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+  .sound_pairing_bgimg {
+    background-image: url(../images/Audio02.jpg);
+    width: 100%;
+    height: 400px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+section#display {
+  padding: 8rem 0;
+  @include title;
+
+  .display_bgimg {
+    background-image: url(../images/Display01.jpg);
+    width: 100%;
+    height: 400px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include lg {
+      background-position: right 20% top;
     }
   }
 }

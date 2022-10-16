@@ -33,3 +33,13 @@ $white: #fcfcfc;
 $black: #333333;
 $grey: #666666;
 $blue: #0066ff;
+
+@mixin title() {
+  .title {
+    margin-bottom: 7rem;
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
