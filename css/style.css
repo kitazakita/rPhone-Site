@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #333333;
+  color: #fcfcfc;
 }
 
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background-color: #fcfcfc;
+  background-color: #333333;
 }
 
 img {
@@ -30,6 +30,14 @@ a:visited {
   height: 100%;
 }
 
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*----
+Contents Start
+----*/
 header {
   height: 50px;
   width: 100%;
@@ -229,5 +237,95 @@ section#MainVisual .devicePhoto {
 @media screen and (max-width: 576px) {
   section#MainVisual .devicePhoto {
     width: 80%;
+  }
+}
+
+section#about {
+  padding: 6rem 0;
+}
+
+section#camera {
+  padding: 5rem 0;
+}
+section#camera .title {
+  margin-bottom: 7rem;
+}
+section#camera .title h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+section#camera .camera_lens .sub_title h3 {
+  margin-top: 1rem;
+}
+section#camera .camera_lens .d-flex {
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  section#camera .camera_lens .d-flex {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+section#camera .camera_lens .d-flex .lens_desc {
+  width: 40%;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  section#camera .camera_lens .d-flex .lens_desc {
+    width: 70%;
+  }
+}
+section#camera .camera_lens .d-flex .lens_img {
+  width: 40%;
+  position: relative;
+  margin-bottom: auto;
+}
+@media screen and (max-width: 768px) {
+  section#camera .camera_lens .d-flex .lens_img {
+    width: 50%;
+  }
+}
+section#camera .camera_lens .d-flex .lens_img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: linear-gradient(180deg, transparent 0 30%, #333333 70% 100%);
+}
+section#camera .camera_night {
+  margin-top: 5rem;
+}
+section#camera .camera_night .sub_title h3 {
+  margin-bottom: 1rem;
+}
+section#camera .camera_night .d-flex {
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  section#camera .camera_night .d-flex {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+section#camera .camera_night .d-flex .night_desc {
+  width: 40%;
+  margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  section#camera .camera_night .d-flex .night_desc {
+    width: 70%;
+  }
+}
+section#camera .camera_night .d-flex .night_img {
+  width: 40%;
+  margin-bottom: 3rem;
+}
+@media screen and (max-width: 768px) {
+  section#camera .camera_night .d-flex .night_img {
+    width: 70%;
   }
 }/*# sourceMappingURL=style.css.map */
