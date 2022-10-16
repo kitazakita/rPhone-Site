@@ -51,15 +51,28 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  header {
+    position: fixed;
+    z-index: 5;
+  }
+}
 header h1.logo {
+  width: 100%;
   font-size: 1.3rem;
   color: #fcfcfc;
   position: relative;
   z-index: 10;
 }
+@media screen and (max-width: 768px) {
+  header h1.logo {
+    position: fixed;
+  }
+}
 
 nav {
   height: 100%;
+  width: 100%;
 }
 nav .pc_nav {
   height: 100%;
@@ -98,9 +111,11 @@ nav .mobile_nav {
 @media screen and (max-width: 768px) {
   nav .mobile_nav {
     display: block;
+    width: 100%;
   }
 }
 nav .mobile_nav .openbtn1 {
+  margin-left: auto;
   position: relative;
   z-index: 10;
   cursor: pointer;
@@ -186,7 +201,7 @@ section#MainVisual {
 }
 @media screen and (max-width: 768px) {
   section#MainVisual {
-    padding-top: 2rem;
+    padding-top: 70px;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
