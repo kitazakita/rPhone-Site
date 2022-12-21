@@ -1,4 +1,4 @@
-@use "./mixin" as *;
+@use './mixin' as *;
 
 * {
   margin: 0;
@@ -8,7 +8,7 @@
   // outline: 1px solid red;
 }
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   background-color: $black;
 }
 img {
@@ -37,6 +37,24 @@ a {
 }
 .text-center {
   text-align: center;
+}
+
+.alert {
+  position: fixed;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  background-color: rgb(253, 237, 237);
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 4px 0px black;
+  z-index: 100;
+  p {
+    line-height: 1.43;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(95, 33, 32);
+    font-family: serif;
+  }
 }
 
 /*----
@@ -322,7 +340,7 @@ section#camera {
           width: 50%;
         }
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           top: 0;
           left: 0;

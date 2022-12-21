@@ -4,11 +4,6 @@ $(".openbtn1").click(function () {
   $(this).next().toggleClass("menu_down");
   $("body").toggleClass("overflow-hidden");
 });
-//モバイルナビのリンクをクリックしたときにモバイルメニューを閉じる機能
-$('.mobile_nav a[href*="#"]').click(function () {
-  $(".openbtn1").toggleClass("active");
-  $(".openbtn1").next().toggleClass("menu_down");
-});
 
 // ページトップボタンの表示非表示する関数
 const PageTopAnime = () => {
@@ -39,30 +34,10 @@ $("#page-top > a").click(() => {
   return false;
 });
 
-//取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
 $('.page-link a[href*="#"]').click(function () {
   let elmHash = $(this).attr("href");
   let pos = $(elmHash).offset().top; //idの上部の距離を取得
   console.log(pos);
-  $("body,html").animate({ scrollTop: pos }, 500);
+  $("body,html").animate({ scrollTop: pos }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
   return false;
-});
-
-function moveAnime() {
-  $(".Animation_trigger").each(function () {
-    var elemPos = $(this).offset().top - 50;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight) {
-      $(this).addClass("fadeInUp");
-    }
-  });
-}
-
-$(window).scroll(function () {
-  moveAnime();
-});
-
-$(window).on("load", function () {
-  moveAnime();
 });
